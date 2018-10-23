@@ -1,0 +1,23 @@
+//
+//  common.pch
+//  feiyouMobile
+//
+//  Created by zhangkai on 15/8/24.
+//  Copyright (c) 2015年 zhangkai. All rights reserved.
+//
+
+#ifndef Common_pch
+#define Common_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Macros.h"
+#import "AppDelegate.h"
+#import "Config.h"
+#import "NetUtils.h"
+#import <Masonry/Masonry.h>
+#import <YYModel/YYModel.h>
+#import "UIView+Toast.h"
+#import "Cache/CacheHelper.h"
+#endif
