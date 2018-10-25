@@ -33,13 +33,23 @@
     }];
 }
 
-- (void)alert:(NSString *)message {
+- (void)alert:(NSString *)message callback:(void (^)(void))finishcallback {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@""
                                                                              message:message                                    preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"关闭" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if(finishcallback){
+            finishcallback();
+        }
     }];
     [alertController addAction:action];
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)alert:(NSString *)message {
+    [self alert:message callback:^{
+        
+    }
+     ];
 }
 
 - (void)show:(NSString *)message {

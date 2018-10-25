@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     if(mAppDelegate._userInfo){
         self.logoutBtn.layer.cornerRadius = 5;
         self.logoutBtn.layer.shadowOffset = CGSizeMake(0, 5);

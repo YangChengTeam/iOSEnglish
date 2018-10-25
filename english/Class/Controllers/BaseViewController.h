@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) IBOutlet UIView *headerView;
 
 @property (nonatomic, strong) MBProgressHUD *hud;
+
+- (void)alert:(NSString *)message callback:(void (^)(void))finishcallback;
 - (void)alert:(NSString *)message;
 
 - (void)show:(NSString *)message;

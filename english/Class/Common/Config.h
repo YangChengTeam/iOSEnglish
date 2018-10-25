@@ -34,4 +34,9 @@
 
 #define LOGIN_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/login"]
 
+
+#define POST_MESSAGE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/post_msg"]
+
+
+
 #endif /* Config_h */

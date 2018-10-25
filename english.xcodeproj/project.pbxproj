@@ -12,6 +12,9 @@
 		4B4A57A9217422D1007ECE8D /* BaseInnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A8217422D1007ECE8D /* BaseInnerViewController.m */; };
 		4B4A57AC21743D7A007ECE8D /* NewsType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57AB21743D7A007ECE8D /* NewsType.m */; };
 		4B5C0D6A217EFA9D00AEB0BC /* CacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C0D69217EFA9D00AEB0BC /* CacheHelper.m */; };
+		4B7897E521818C9B005182F2 /* ModifyFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7897E421818C9B005182F2 /* ModifyFieldViewController.m */; };
+		4B7897E821818CC3005182F2 /* ModifyGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7897E721818CC3005182F2 /* ModifyGradeViewController.m */; };
+		4B7897EB21818CDF005182F2 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7897EA21818CDF005182F2 /* ModifyPasswordViewController.m */; };
 		4B7E36A121772209000CEC95 /* YBImageBrowserProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E366721772209000CEC95 /* YBImageBrowserProgressView.m */; };
 		4B7E36A221772209000CEC95 /* YBImageBrowserSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E366921772209000CEC95 /* YBImageBrowserSheetView.m */; };
 		4B7E36A321772209000CEC95 /* YBImageBrowserTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E366B21772209000CEC95 /* YBImageBrowserTipView.m */; };
@@ -111,6 +114,12 @@
 		4B4A57AB21743D7A007ECE8D /* NewsType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsType.m; sourceTree = "<group>"; };
 		4B5C0D68217EFA9D00AEB0BC /* CacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheHelper.h; sourceTree = "<group>"; };
 		4B5C0D69217EFA9D00AEB0BC /* CacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheHelper.m; sourceTree = "<group>"; };
+		4B7897E321818C9B005182F2 /* ModifyFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyFieldViewController.h; sourceTree = "<group>"; };
+		4B7897E421818C9B005182F2 /* ModifyFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyFieldViewController.m; sourceTree = "<group>"; };
+		4B7897E621818CC3005182F2 /* ModifyGradeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyGradeViewController.h; sourceTree = "<group>"; };
+		4B7897E721818CC3005182F2 /* ModifyGradeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyGradeViewController.m; sourceTree = "<group>"; };
+		4B7897E921818CDF005182F2 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		4B7897EA21818CDF005182F2 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
 		4B7E366621772209000CEC95 /* YBImageBrowserProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserProgressView.h; sourceTree = "<group>"; };
 		4B7E366721772209000CEC95 /* YBImageBrowserProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBImageBrowserProgressView.m; sourceTree = "<group>"; };
 		4B7E366821772209000CEC95 /* YBImageBrowserSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserSheetView.h; sourceTree = "<group>"; };
@@ -517,6 +526,12 @@
 				4BB918EA217D5FD80027853E /* QQViewController.m */,
 				4BB918EC217D79E50027853E /* ForgotViewController.h */,
 				4BB918ED217D79E50027853E /* ForgotViewController.m */,
+				4B7897E321818C9B005182F2 /* ModifyFieldViewController.h */,
+				4B7897E421818C9B005182F2 /* ModifyFieldViewController.m */,
+				4B7897E621818CC3005182F2 /* ModifyGradeViewController.h */,
+				4B7897E721818CC3005182F2 /* ModifyGradeViewController.m */,
+				4B7897E921818CDF005182F2 /* ModifyPasswordViewController.h */,
+				4B7897EA21818CDF005182F2 /* ModifyPasswordViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -968,6 +983,7 @@
 				4BF53341216F1A1D0078FBA7 /* BaseView.m in Sources */,
 				4B7E36A721772209000CEC95 /* YBIBCopywriter.m in Sources */,
 				4BFAF9EC21718BBA00C95F7E /* UIView+Toast.m in Sources */,
+				4B7897E821818CC3005182F2 /* ModifyGradeViewController.m in Sources */,
 				4B7E36A121772209000CEC95 /* YBImageBrowserProgressView.m in Sources */,
 				4B7E36AB21772209000CEC95 /* YBIBPhotoAlbumManager.m in Sources */,
 				4BF532C7216EE0D00078FBA7 /* WebViewController.m in Sources */,
@@ -993,6 +1009,7 @@
 				4BF532E2216EE2BB0078FBA7 /* MicroClassDetailViewController.m in Sources */,
 				4B7E36B421772209000CEC95 /* YBVideoBrowseCellData.m in Sources */,
 				4B7E36A921772209000CEC95 /* YBIBGestureInteractionProfile.m in Sources */,
+				4B7897E521818C9B005182F2 /* ModifyFieldViewController.m in Sources */,
 				4BFAFA0221719ADA00C95F7E /* OrderRecordViewController.m in Sources */,
 				4BF532D6216EE1640078FBA7 /* BookContentDetailViewController.m in Sources */,
 				4BF532D3216EE1430078FBA7 /* BookContentsViewController.m in Sources */,
@@ -1002,6 +1019,7 @@
 				4B7E36C321786FC6000CEC95 /* SettingItemTableViewCell.m in Sources */,
 				4BF532CD216EE10B0078FBA7 /* BooksViewController.m in Sources */,
 				4BF532C4216EE0B70078FBA7 /* IndexViewController.m in Sources */,
+				4B7897EB21818CDF005182F2 /* ModifyPasswordViewController.m in Sources */,
 				4B7E36AD21772209000CEC95 /* YBIBUtilities.m in Sources */,
 				4BB918EE217D79E50027853E /* ForgotViewController.m in Sources */,
 				4B5C0D6A217EFA9D00AEB0BC /* CacheHelper.m in Sources */,

@@ -121,15 +121,10 @@ static NSString *settingViewIdentifier=@"settingViewIdentifier";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = 101;
     if(indexPath.row == 0){
-//        if(isPhone5 || isRetina){
-//            height = 228;
-//        } else  {
-//            height = 240;
-//        }
         if(isPhone5 || isRetina){
-            height = 188;
+            height = 164;
         } else  {
-            height = 200;
+            height = 176;
         }
     } else {
         if(isPhone5 || isRetina){
@@ -143,7 +138,11 @@ static NSString *settingViewIdentifier=@"settingViewIdentifier";
     NSInteger tag = ((UIButton*)sender).tag;
     switch (tag) {
         case 0:
-            [self performSegueWithIdentifier:@"vip" sender:nil];
+            if(mAppDelegate._userInfo){
+                [self performSegueWithIdentifier:@"vip" sender:nil];
+            }else {
+                [self performSegueWithIdentifier:@"login" sender:nil];
+            }
             break;
         case 2: {
             UIViewController *qqViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"qq"];

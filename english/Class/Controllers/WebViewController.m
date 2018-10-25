@@ -62,9 +62,7 @@
                          NSString *url = [NSString stringWithFormat:@"%@?t=%@", data[@"data"][@"info"][@"url"], data[@"add_time"][@"info"][@"url"]];
                          [weakSelf.webView  loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
                      }
-                     if(weakSelf.webView.scrollView.mj_header){
-                         [weakSelf.webView.scrollView.mj_header endRefreshing];
-                     }
+                     
                  }];
 }
 
@@ -75,7 +73,9 @@
 
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    [webView.scrollView.mj_header endRefreshing];
+    if(webView.scrollView.mj_header){
+        [webView.scrollView.mj_header endRefreshing];
+    }
 }
 
 

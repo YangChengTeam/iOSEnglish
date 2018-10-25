@@ -56,18 +56,19 @@
     }
     [self.view endEditing:YES];
     [self show:@"登录中..."];
+    __weak typeof(self) weakSelf = self;
     [NetUtils postWithUrl:LOGIN_URL params:@{
                                              @"user_name":username,
                                              @"pwd":password
                                              } callback:^(NSDictionary *data) {
-                                                 [self dismiss];
+                                                 [weakSelf dismiss];
                                                  if([data[@"code"] integerValue] == 1){
                                                      mAppDelegate._userInfo = data[@"data"][@"info"];
                                                      [[CacheHelper shareInstance] setCurrentUser:data[@"data"][@"info"]];
                                                 [[NSNotificationCenter defaultCenter] postNotificationName:kNotiLoginSuccess object:nil];
-                                                     [self.navigationController popViewControllerAnimated:YES];
+                                                     [weakSelf.navigationController popViewControllerAnimated:YES];
                                                  } else {
-                                                     [self alert:data[@"msg"]];
+                                                     [weakSelf alert:data[@"msg"]];
                                                  }
                                              }];
 }

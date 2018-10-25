@@ -6,11 +6,13 @@
 //  Copyright © 2018年 zhangkai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseInnerViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VipViewController : UIViewController
+@interface VipViewController : BaseInnerViewController
+
+@property (nonatomic, assign) IBOutlet UILabel *vipDespLabel;
 
 @end
 
