@@ -16,4 +16,7 @@
 
 //  encryt 关闭自定义加密  使用https
 + (void)postWithUrl:(NSString *)url params:(NSDictionary *)data callback:(void (^)(NSDictionary *))finishcallback error:(void (^)(NSError *))errorcallback encryt:(BOOL)encryt;
+
++ (void)postWithUrl:(NSString *)url params:(NSDictionary *)data callback:(void (^)(NSDictionary *))finishcallback error:(void (^)(NSError *))errorcallback reqencryt:(BOOL)reqencryt iszip:(BOOL) iszip resencryt:(BOOL)resencryt;
+
 @end

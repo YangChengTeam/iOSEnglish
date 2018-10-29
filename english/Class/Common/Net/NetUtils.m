@@ -11,9 +11,9 @@
 #import "EncrytUtils.h"
 #import "UIAlertView+Block.h"
 #import <AdSupport/ASIdentifierManager.h>
+#import "NSData+GZIP.h"
 
 #import <UMCommon/UMCommon.h>
-
 #define UUID @"uuid"
 
 @implementation NetUtils
@@ -23,14 +23,14 @@
 }
 
 + (void)postWithUrl:(NSString *)url params:(NSDictionary *)data callback:(void (^)(NSDictionary *))finishcallback error:(void (^)(NSError *))errorcallback {
-    [self postWithUrl:url params:data callback:finishcallback error:errorcallback encryt:YES];
+    [self postWithUrl:url params:data callback:finishcallback error:errorcallback reqencryt:YES iszip:YES resencryt:YES];
 }
 
-+ (void)postWithUrl:(NSString *)url params:(NSDictionary *)data callback:(void (^)(NSDictionary *))finishcallback error:(void (^)(NSError *))errorcallback encryt:(BOOL)encryt {
++ (void)postWithUrl:(NSString *)url params:(NSDictionary *)data callback:(void (^)(NSDictionary *))finishcallback error:(void (^)(NSError *))errorcallback reqencryt:(BOOL)reqencryt iszip:(BOOL)iszip resencryt:(BOOL)resencryt {
     NSLog(@"leqisdk:请求url->%@", url);
    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    if(!encryt){
+    if(!reqencryt){
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         [securityPolicy setAllowInvalidCertificates:YES];
         manager.securityPolicy = securityPolicy;
@@ -42,7 +42,7 @@
     [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
     NSMutableDictionary *defaultParams = [NSMutableDictionary new];
-    if(encryt){
+    if(true){
         //timestamp
         NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
         NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
@@ -81,11 +81,15 @@
     NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     NSLog(@"leqisdk:请求参数->%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
-    if(encryt){
+    if(reqencryt){
         NSData *params  = [EncrytUtils gzipByRsa:jsonStr];
         [req setHTTPBody:params];
     } else {
-        [req setHTTPBody:jsonData];
+        if(iszip){
+            [req setHTTPBody: [jsonData gzippedData]];
+        } else {
+            [req setHTTPBody:jsonData];
+        }
     }
     
     [[manager dataTaskWithRequest:req uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
@@ -110,7 +114,7 @@
             return;
         }
         NSData *jsonData = nil;
-        if(encryt){
+        if(resencryt){
             NSString *jsonStr  = [EncrytUtils upgzipByResponse:responseObject];
             jsonData =[jsonStr dataUsingEncoding:NSUTF8StringEncoding];
         } else {
@@ -118,7 +122,7 @@
         }
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
         NSLog(@"leqisdk:服务器返回数据->%@", dictionary);
-        if(encryt && [dictionary[@"code"] integerValue] == -100){
+        if(resencryt && [dictionary[@"code"] integerValue] == -100){
             [EncrytUtils setPubKey:dictionary[@"data"][@"publickey"]];
             [NetUtils postWithUrl:url params:data callback:finishcallback error: errorcallback];
             return;
@@ -128,6 +132,7 @@
         }
     }] resume];
 }
+
 
 +(NSData*) dict2jsonString:(NSDictionary *) data {
     if(data == nil) return nil;
@@ -139,6 +144,7 @@
     
     return jsonData;
 }
+
 
 
 

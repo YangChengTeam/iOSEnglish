@@ -20,6 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColorFromHex(0xE6F1FB);
+    
+    
+}
+
+- (void)endInput:(id)sender {
+    [self.view endEditing:YES];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -85,6 +91,31 @@
     [self dismiss:nil];
 }
 
+-(void)countdown:(UIButton *)codeBtn {
+    __block NSInteger time = 59;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0);
+    dispatch_source_set_event_handler(_timer, ^{
+        if(time <= 0){
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [codeBtn setTitle:@"重新发送" forState:UIControlStateNormal];
+                [codeBtn setBackgroundColor:UIColorFromHex(0x21B5F8)];
+                codeBtn.userInteractionEnabled = YES;
+            });
+        }else{
+            int seconds = time % 60;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [codeBtn setTitle:[NSString stringWithFormat:@"重新发送(%.2d)", seconds] forState:UIControlStateNormal];
+                [codeBtn setBackgroundColor:UIColorFromHex(0x979797)];
+                codeBtn.userInteractionEnabled = NO;
+            });
+            time--;
+        }
+    });
+    dispatch_resume(_timer);
+}
 
 // 转换时间戳
 - (NSString *)getDateStringWithTimeStr:(NSString *)str{

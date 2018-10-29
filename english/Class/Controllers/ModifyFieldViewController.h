@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModifyFieldViewController : BaseInnerViewController
 
+@property (nonatomic, assign) IBOutlet UITextField *fieldTF;
+@property (nonatomic, assign) IBOutlet UIButton *submitBtn;
+
+@property (nonatomic, strong) NSDictionary *info;
+
 @end
 
 NS_ASSUME_NONNULL_END

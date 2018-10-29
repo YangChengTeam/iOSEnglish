@@ -12,6 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ForgotViewController : BaseInnerViewController
 
+@property (nonatomic, assign) IBOutlet UIView *userView;
+@property (nonatomic, assign) IBOutlet UIView *codeView;
+@property (nonatomic, assign) IBOutlet UIView *passwordView;
+
+
+@property (nonatomic, assign) IBOutlet UITextField *userTf;
+@property (nonatomic, assign) IBOutlet UITextField *codeTf;
+@property (nonatomic, assign) IBOutlet UITextField *passwordTf;
+
+@property (nonatomic, assign) IBOutlet UIButton *submitBtn;
+@property (nonatomic, assign) IBOutlet UIButton *codeBtn;
+
 @end
 
 NS_ASSUME_NONNULL_END

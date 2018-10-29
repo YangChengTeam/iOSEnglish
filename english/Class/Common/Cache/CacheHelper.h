@@ -17,4 +17,10 @@
 - (void)setCurrentUser:(NSDictionary *)user;
 - (NSMutableDictionary *)getCurrentUser;
 
+- (void)setUserName:(NSString *)username;
+- (NSString *)getUserName;
+
+- (void)setGrade:(NSString *)grade;
+- (NSString *)getGrade;
+
 @end

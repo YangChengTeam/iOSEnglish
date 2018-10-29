@@ -36,6 +36,17 @@
     
     self.passwordTf.delegate = self;
     
+    NSString *username = [[CacheHelper shareInstance] getUserName];
+    if(username){
+        self.userTf.text = username;
+    }
+    
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *singleFingerTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(endInput:)];
+    [self.view addGestureRecognizer:singleFingerTap];
+    
 }
 
 - (IBAction)nav2login:(id)sender {
@@ -55,6 +66,7 @@
         return;
     }
     [self.view endEditing:YES];
+    [[CacheHelper shareInstance] setUserName:username];
     [self show:@"登录中..."];
     __weak typeof(self) weakSelf = self;
     [NetUtils postWithUrl:LOGIN_URL params:@{

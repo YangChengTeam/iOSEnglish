@@ -139,7 +139,11 @@ static NSString *settingViewIdentifier=@"settingViewIdentifier";
     switch (tag) {
         case 0:
             if(mAppDelegate._userInfo){
-                [self performSegueWithIdentifier:@"vip" sender:nil];
+                if([mAppDelegate._userInfo[@"vip"] integerValue] == 1){
+                    [self performSegueWithIdentifier:@"vip" sender:nil];
+                } else {
+                    
+                }
             }else {
                 [self performSegueWithIdentifier:@"login" sender:nil];
             }

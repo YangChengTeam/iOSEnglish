@@ -10,6 +10,8 @@
 #import <YYCache/YYCache.h>
 
 #define CURRENT_USER_KEY @"current_user_key"
+#define USER_NAME_KEY @"user_name_key"
+#define GRADE_KEY @"grade_key"
 
 
 @interface CacheHelper()
@@ -42,5 +44,20 @@ static CacheHelper* instance = nil;
     return (NSDictionary *)[self.diskCache objectForKey:CURRENT_USER_KEY];
 }
 
+- (void)setUserName:(NSString *)username {
+    [self.diskCache setObject:username forKey:USER_NAME_KEY];
+}
+
+- (NSString *)getUserName {
+    return (NSString *)[self.diskCache objectForKey:USER_NAME_KEY];
+}
+
+- (void)setGrade:(NSString *)grade {
+    [self.diskCache setObject:grade forKey:GRADE_KEY];
+}
+
+- (NSString *)getGrade {
+    return (NSString *)[self.diskCache objectForKey:GRADE_KEY];
+}
 
 @end

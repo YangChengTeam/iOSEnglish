@@ -18,5 +18,4 @@ target 'english' do
   pod 'STPopup'
   pod 'YYCache'
   pod 'UITextView+Placeholder'
-
 end

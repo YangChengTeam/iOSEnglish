@@ -37,6 +37,19 @@
 
 #define POST_MESSAGE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/post_msg"]
 
+#define REGISTER_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/mobile_reg"]
+
+#define REGISTER_SEND_CODE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/reg_sendCode"]
+
+#define FORGOT_SEND_CODE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/forgetPwd_sendCode"]
+
+#define FORGOT_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/reset_pwd"]
+
+#define UPD_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/upd"]
+
+#define UPD_PWD_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"user/upd_pwd"]
+
+#define ORDER_RECORD_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"order/lists"]
 
 
 #endif /* Config_h */

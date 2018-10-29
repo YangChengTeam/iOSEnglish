@@ -146,6 +146,7 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     [self performSegueWithIdentifier:@"news" sender:newsType];
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"%@", sender);
     if([segue.identifier isEqualToString:@"news"]){
@@ -175,7 +176,7 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
         newsCell.titleLabel.text = info[@"title"];
         newsCell.timeLabel.text = [self getDateStringWithTimeStr:info[@"add_time"]];
         [newsCell.newsImageView sd_setImageWithURL:[NSURL URLWithString:info[@"img"]]
-                     placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+                                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
         if(row == _dataSource.count){
             newsCell.separatorInset = UIEdgeInsetsMake(0, newsCell.bounds.size.width, 0, 0);
         } else {
@@ -230,5 +231,6 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
  // Pass the selected object to the new view controller.
  }
  */
+
 
 @end
