@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderCollectionReusableView">
+            <connections>
+                <outlet property="titleLbl" destination="pqJ-zj-43g" id="2Q8-je-rp9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已更新181集" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqJ-zj-43g">
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="pqJ-zj-43g" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="4oT-FL-2vm"/>
+                <constraint firstItem="pqJ-zj-43g" firstAttribute="top" secondItem="9Gg-ye-v9C" secondAttribute="top" id="Dwj-YY-su3"/>
+                <constraint firstItem="pqJ-zj-43g" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" id="Yot-Fw-8p1"/>
+                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="pqJ-zj-43g" secondAttribute="trailing" constant="5" id="hyV-FX-kzG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <point key="canvasLocation" x="132.80000000000001" y="145.72713643178412"/>
+        </collectionReusableView>
+    </objects>
+</document>

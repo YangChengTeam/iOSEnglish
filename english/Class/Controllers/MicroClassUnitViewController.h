@@ -6,11 +6,13 @@
 //  Copyright © 2018年 zhangkai. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseInnerViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MicroClassUnitViewController : BaseViewController
+@interface MicroClassUnitViewController : BaseInnerViewController
+
+@property (nonatomic, strong) IBOutlet NSDictionary *info;
 
 @end
 

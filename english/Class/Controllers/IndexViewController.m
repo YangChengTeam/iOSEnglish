@@ -59,7 +59,6 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     [self.indexTableView.mj_header beginRefreshing];
     
     // 加载数据
-    [self loadData];
     [self logined:nil];
     
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.height / 2;

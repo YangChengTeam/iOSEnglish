@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B10645B21880B74009D6D2D /* MircoClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */; };
+		4B10646321885603009D6D2D /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */; };
+		4B10646421885603009D6D2D /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B10646221885603009D6D2D /* HeaderCollectionReusableView.xib */; };
 		4B4A57A321741E74007ECE8D /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A221741E74007ECE8D /* NewsViewController.m */; };
 		4B4A57A621741F07007ECE8D /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A521741F07007ECE8D /* NewsDetailViewController.m */; };
 		4B4A57A9217422D1007ECE8D /* BaseInnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A8217422D1007ECE8D /* BaseInnerViewController.m */; };
@@ -113,6 +116,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B10645821880B74009D6D2D /* MircoClassCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MircoClassCollectionViewCell.h; sourceTree = "<group>"; };
+		4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MircoClassCollectionViewCell.m; sourceTree = "<group>"; };
+		4B10646021885603009D6D2D /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		4B10646221885603009D6D2D /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		4B4A57A121741E74007ECE8D /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		4B4A57A221741E74007ECE8D /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		4B4A57A421741F07007ECE8D /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
@@ -632,7 +640,6 @@
 			isa = PBXGroup;
 			children = (
 				4BF53340216F1A1D0078FBA7 /* BaseView.h */,
-				4BF5333F216F1A1D0078FBA7 /* BaseView.m */,
 				4BBFD82821704DC80093ECE1 /* IndexHeaderTableViewCell.h */,
 				4BBFD82921704DC80093ECE1 /* IndexHeaderTableViewCell.m */,
 				4BBFD82A21704DC80093ECE1 /* IndexHeaderTableViewCell.xib */,
@@ -641,6 +648,7 @@
 				4BBFD82F21706B800093ECE1 /* NewsTableViewCell.xib */,
 				4B7E36BB21786FB7000CEC95 /* SettingHeaderTableViewCell.h */,
 				4B7E36BC21786FB7000CEC95 /* SettingHeaderTableViewCell.m */,
+				4BF5333F216F1A1D0078FBA7 /* BaseView.m */,
 				4B7E36BD21786FB7000CEC95 /* SettingHeaderTableViewCell.xib */,
 				4B7E36C021786FC6000CEC95 /* SettingItemTableViewCell.h */,
 				4B7E36C121786FC6000CEC95 /* SettingItemTableViewCell.m */,
@@ -648,6 +656,11 @@
 				4BB005E32186E710000D81DB /* OrderRecordTableViewCell.h */,
 				4BB005E42186E710000D81DB /* OrderRecordTableViewCell.m */,
 				4BB005E52186E710000D81DB /* OrderRecordTableViewCell.xib */,
+				4B10645821880B74009D6D2D /* MircoClassCollectionViewCell.h */,
+				4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */,
+				4B10646021885603009D6D2D /* HeaderCollectionReusableView.h */,
+				4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */,
+				4B10646221885603009D6D2D /* HeaderCollectionReusableView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -986,6 +999,7 @@
 				4BBFD82C21704DC80093ECE1 /* IndexHeaderTableViewCell.xib in Resources */,
 				4B7E36B621772209000CEC95 /* YBImageBrowser.bundle in Resources */,
 				4BB005DE2186AF1F000D81DB /* BRPickerView.bundle in Resources */,
+				4B10646421885603009D6D2D /* HeaderCollectionReusableView.xib in Resources */,
 				4BF5331A216EE79E0078FBA7 /* UMSocialSDKResources.bundle in Resources */,
 				4BFF5B64216ED39F00D482E5 /* Assets.xcassets in Resources */,
 				4B7E36C421786FC6000CEC95 /* SettingItemTableViewCell.xib in Resources */,
@@ -1058,6 +1072,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B10646321885603009D6D2D /* HeaderCollectionReusableView.m in Sources */,
 				4B7E36B021772209000CEC95 /* YBImageBrowseCell.m in Sources */,
 				4BB005E12186AF1F000D81DB /* NSDate+BRPickerView.m in Sources */,
 				4BFAF9F921719A4200C95F7E /* LoginViewController.m in Sources */,
@@ -1099,6 +1114,7 @@
 				4BFAF9FF21719AA700C95F7E /* SettingViewController.m in Sources */,
 				4BF532E2216EE2BB0078FBA7 /* MicroClassDetailViewController.m in Sources */,
 				4B7E36B421772209000CEC95 /* YBVideoBrowseCellData.m in Sources */,
+				4B10645B21880B74009D6D2D /* MircoClassCollectionViewCell.m in Sources */,
 				4B7E36A921772209000CEC95 /* YBIBGestureInteractionProfile.m in Sources */,
 				4BB005DD2186AF1F000D81DB /* BRAddressPickerView.m in Sources */,
 				4B7897E521818C9B005182F2 /* ModifyFieldViewController.m in Sources */,

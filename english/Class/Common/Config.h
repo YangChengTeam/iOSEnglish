@@ -51,5 +51,9 @@
 
 #define ORDER_RECORD_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"order/lists"]
 
+#define WEIKE_CATEGORY_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"news/getParentList"]
+
+#define WEIKE_UNIT_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"news/getChildList"]
+
 
 #endif /* Config_h */

@@ -54,6 +54,7 @@
         [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:mAppDelegate._userInfo[@"face"]]
                                 placeholderImage:[UIImage imageNamed:@"default_big_avatar"]];
         self.schollLbl.text = mAppDelegate._userInfo[@"school"];
+        self.schollLbl.textColor = [UIColor lightGrayColor];
     }
 }
 

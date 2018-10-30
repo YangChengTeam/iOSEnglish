@@ -122,9 +122,9 @@ static NSString *settingViewIdentifier=@"settingViewIdentifier";
     CGFloat height = 101;
     if(indexPath.row == 0){
         if(isPhone5 || isRetina){
-            height = 164;
+            height = 172;
         } else  {
-            height = 176;
+            height = 184;
         }
     } else {
         if(isPhone5 || isRetina){

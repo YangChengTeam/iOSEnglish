@@ -28,7 +28,6 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.titleLbl.text = self.newsType.title;
-    self->_dataSource = [NSMutableArray array];
     self->_page = 1;
     self->_pagesize = 20;
     // tableiView 初始设置
@@ -36,12 +35,15 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     self.newsTableView.dataSource = self;
     self.newsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.newsTableView registerNib:[UINib nibWithNibName:@"NewsTableViewCell" bundle:nil] forCellReuseIdentifier:newsViewIdentifier];
-    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    self.newsTableView.tableFooterView = view;
     // 下拉刷新
     __weak typeof(self) weakSelf = self;
     MJRefreshNormalHeader *normalHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         //Call this Block When enter the refresh status automatically
         self->_page = 1;
+        self->_dataSource = [NSMutableArray array];
         [weakSelf loadData];
     }];
     normalHeader.stateLabel.hidden = YES;
@@ -59,8 +61,6 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     normalAutoFooter.refreshingTitleHidden = YES;
     self.newsTableView.mj_footer = normalAutoFooter;
     
-    // 加载数据
-    [self loadData];
 }
 
 - (void)loadData {
@@ -75,12 +75,7 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
         if([data[@"code"] integerValue] == 1){
              list = [NSArray arrayWithArray:data[@"data"][@"list"]];
              if(list && list.count > 0){
-                 weakSelf.newsTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-                 if(!weakSelf.newsTableView.tableFooterView){
-                     UIView *view = [UIView new];
-                     view.backgroundColor = [UIColor clearColor];
-                     weakSelf.newsTableView.tableFooterView = view;
-                 }
+                 
                   [self->_dataSource addObjectsFromArray:list];
                   weakSelf.newsTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
                   [weakSelf.newsTableView reloadData];
@@ -91,7 +86,7 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
             [weakSelf.newsTableView.mj_header endRefreshing];
         }
                                                 
-        if(self->_page != 1 && weakSelf.newsTableView.mj_footer){
+        if(weakSelf.newsTableView.mj_footer){
             if(!list || list.count < self->_pagesize){
              ((MJRefreshAutoNormalFooter*)weakSelf.newsTableView.mj_footer).stateLabel.hidden = NO;
                 [weakSelf.newsTableView.mj_footer endRefreshingWithNoMoreData];
