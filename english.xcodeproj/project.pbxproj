@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B10645B21880B74009D6D2D /* MircoClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */; };
 		4B10646321885603009D6D2D /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */; };
-		4B10646421885603009D6D2D /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B10646221885603009D6D2D /* HeaderCollectionReusableView.xib */; };
 		4B4A57A321741E74007ECE8D /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A221741E74007ECE8D /* NewsViewController.m */; };
 		4B4A57A621741F07007ECE8D /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A521741F07007ECE8D /* NewsDetailViewController.m */; };
 		4B4A57A9217422D1007ECE8D /* BaseInnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A8217422D1007ECE8D /* BaseInnerViewController.m */; };
@@ -120,7 +119,6 @@
 		4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MircoClassCollectionViewCell.m; sourceTree = "<group>"; };
 		4B10646021885603009D6D2D /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
 		4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
-		4B10646221885603009D6D2D /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		4B4A57A121741E74007ECE8D /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		4B4A57A221741E74007ECE8D /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		4B4A57A421741F07007ECE8D /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
@@ -660,7 +658,6 @@
 				4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */,
 				4B10646021885603009D6D2D /* HeaderCollectionReusableView.h */,
 				4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */,
-				4B10646221885603009D6D2D /* HeaderCollectionReusableView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -999,7 +996,6 @@
 				4BBFD82C21704DC80093ECE1 /* IndexHeaderTableViewCell.xib in Resources */,
 				4B7E36B621772209000CEC95 /* YBImageBrowser.bundle in Resources */,
 				4BB005DE2186AF1F000D81DB /* BRPickerView.bundle in Resources */,
-				4B10646421885603009D6D2D /* HeaderCollectionReusableView.xib in Resources */,
 				4BF5331A216EE79E0078FBA7 /* UMSocialSDKResources.bundle in Resources */,
 				4BFF5B64216ED39F00D482E5 /* Assets.xcassets in Resources */,
 				4B7E36C421786FC6000CEC95 /* SettingItemTableViewCell.xib in Resources */,
