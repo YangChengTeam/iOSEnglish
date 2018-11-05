@@ -62,9 +62,6 @@ static NSString *orderRecordViewIdentifier=@"orderRecordViewIdentifier";
     normalAutoFooter.stateLabel.hidden = YES;
     normalAutoFooter.refreshingTitleHidden = YES;
     self.orderRecordTableView.mj_footer = normalAutoFooter;
-    
-    // 加载数据
-    [self loadData];
 }
 
 - (void)loadData {
@@ -93,7 +90,7 @@ static NSString *orderRecordViewIdentifier=@"orderRecordViewIdentifier";
                                                     [weakSelf.orderRecordTableView.mj_header endRefreshing];
                                                 }
                                                 
-                                                if(self->_page != 1 && weakSelf.orderRecordTableView.mj_footer){
+                                        if(weakSelf.orderRecordTableView.mj_footer){
                                                     if(!list || list.count < self->_pagesize){
                                                         ((MJRefreshAutoNormalFooter*)weakSelf.orderRecordTableView.mj_footer).stateLabel.hidden = NO;
                                                         [weakSelf.orderRecordTableView.mj_footer endRefreshingWithNoMoreData];

@@ -96,7 +96,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     static NSString *identifier = @"microClass";
     MircoClassCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    cell.layer.cornerRadius = 5;
+    cell.layer.cornerRadius = 3;
     cell.titleLbl.text = _dataSource[indexPath.row][@"title"];
     [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:_dataSource[indexPath.row][@"img"]] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     NSString * htmlString = [NSString stringWithFormat:@"<b style='color:red'>%@</b>人已购买", _dataSource[indexPath.row][@"user_num"]];

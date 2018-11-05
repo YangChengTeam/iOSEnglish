@@ -24,6 +24,15 @@
     
 }
 
+- (void)interfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    NSNumber *resetOrientationTarget = [NSNumber numberWithInt:UIInterfaceOrientationUnknown];
+    [[UIDevice currentDevice] setValue:resetOrientationTarget forKey:@"orientation"];
+    NSNumber *orientationTarget = [NSNumber numberWithInt:orientation];
+    [[UIDevice currentDevice] setValue:orientationTarget forKey:@"orientation"];
+}
+
+
 - (void)endInput:(id)sender {
     [self.view endEditing:YES];
 }

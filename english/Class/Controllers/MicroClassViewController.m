@@ -107,7 +107,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     static NSString *identifier = @"microClass";
     MircoClassCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    cell.layer.cornerRadius = 5;
+    cell.layer.cornerRadius = 3;
     cell.titleLbl.text = _dataSource[indexPath.row][@"title"];
     [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:_dataSource[indexPath.row][@"img"]] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     NSString * htmlString = [NSString stringWithFormat:@"总共<b style='color:red'>%@</b>单元", _dataSource[indexPath.row][@"unit_num"]];
@@ -140,9 +140,9 @@
         HeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"head" forIndexPath:indexPath];
         _titleLbl = [UILabel new];
         _titleLbl.textColor = [UIColor darkGrayColor];
-        _titleLbl.font = [UIFont systemFontOfSize: 14];
+        _titleLbl.font = [UIFont systemFontOfSize: 15];
         _titleLbl.textAlignment = NSTextAlignmentRight;
-        _titleLbl.frame = CGRectMake(0, 0, self.view.bounds.size.width - 5, 20);
+        _titleLbl.frame = CGRectMake(0, 0, self.view.bounds.size.width - 9, 30);
         [header addSubview:_titleLbl];
         return header;
     } else {
@@ -152,7 +152,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    CGSize size= {self.view.bounds.size.width, 20};
+    CGSize size= {self.view.bounds.size.width, 30};
     return size;
 }
 

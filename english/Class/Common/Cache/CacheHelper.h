@@ -23,4 +23,8 @@
 - (void)setGrade:(NSString *)grade;
 - (NSString *)getGrade;
 
+- (void)setBook:(NSDictionary *)dict withType:(NSString *)type;
+- (void)removeBook:(NSDictionary *)dict withType:(NSString *)type;
+- (NSMutableArray *)getBooksWithType:(NSString *)type;
+
 @end

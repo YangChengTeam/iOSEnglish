@@ -58,6 +58,10 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     self.indexTableView.mj_header = normalHeader;
     [self.indexTableView.mj_header beginRefreshing];
     
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    self.indexTableView.tableFooterView = view;
+    
     // 加载数据
     [self logined:nil];
     
@@ -83,11 +87,6 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     }
     [NetUtils postWithUrl:INDEX_URL params:params callback:^(NSDictionary * data) {
         if([data[@"code"] integerValue] == 1){
-            if(!weakSelf.indexTableView.tableFooterView){
-                UIView *view = [UIView new];
-                view.backgroundColor = [UIColor clearColor];
-                weakSelf.indexTableView.tableFooterView = view;
-            }
             weakSelf.indexTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
             self->_dataSource = [NSArray arrayWithArray:data[@"data"][@"tuijian"]];
             mAppDelegate._dataSource = self->_dataSource;

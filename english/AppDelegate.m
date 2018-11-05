@@ -50,6 +50,22 @@
     return result;
 }
 
+static NSString * const VIDEO_CONTROLLER_CLASS_NAME_IOS7 = @"MPInlineVideoFullscreenViewController";
+static NSString * const VIDEO_CONTROLLER_CLASS_NAME_IOS8 = @"AVFullScreenViewController";
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window {
+    if ([[window.rootViewController presentedViewController] isKindOfClass:NSClassFromString(VIDEO_CONTROLLER_CLASS_NAME_IOS7)] ||
+        [[window.rootViewController presentedViewController] isKindOfClass:NSClassFromString(VIDEO_CONTROLLER_CLASS_NAME_IOS8)]){
+        return UIInterfaceOrientationMaskLandscapeRight;
+    }
+    else {
+        NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+        [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+        
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

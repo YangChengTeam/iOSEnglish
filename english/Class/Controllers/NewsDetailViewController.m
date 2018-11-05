@@ -15,6 +15,7 @@
 #import "NewsTableViewCell.h"
 #import "NewsDetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <WebKit/WebKit.h>
 
 
 @interface NewsDetailViewController ()<UIScrollViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler, YBImageBrowserDataSource, UITableViewDelegate, UITableViewDataSource>
@@ -89,15 +90,15 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     // tableiView 初始设置
     self.topTableView.delegate = self;
     self.topTableView.dataSource = self;
+    self.topTableView.scrollEnabled = NO;
+    self.topTableView.bounces = NO;
     [self.topTableView registerNib:[UINib nibWithNibName:@"NewsTableViewCell" bundle:nil] forCellReuseIdentifier:newsViewIdentifier];
     
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor clearColor];
     self.topTableView.tableFooterView = view;
     self.topTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    
-    [self loadData];
-    
+        
     // 下拉刷新
     __weak typeof(self) weakSelf = self;
     MJRefreshNormalHeader *normalHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -125,7 +126,6 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
     data.sourceObject = _imgurls[index];
     return data;
 }
-
 
 
 - (void)loadData {
@@ -226,7 +226,13 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
         [self.wrapperWebView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.height.equalTo(@(contentHeight));
         }];
-        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, contentHeight + self.sampleView.frame.size.height+self.quickView.frame.size.height+70*self->_dataSource.count+50);
+        
+        [self.topTableView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@(70*self->_dataSource.count));
+        }];
+        
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, contentHeight + self.sampleView.frame.size.height+HEIGHT(self.quickView) + 70*self->_dataSource.count+50);
+        
     }
 }
 

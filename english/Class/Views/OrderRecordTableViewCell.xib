@@ -20,9 +20,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单号: 201810171014346342" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAR-CS-5g8">
-                        <rect key="frame" x="10" y="10" width="189" height="21"/>
+                        <rect key="frame" x="10" y="10" width="195" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="189" id="Ghl-hY-KXt"/>
+                            <constraint firstAttribute="width" constant="195" id="Ghl-hY-KXt"/>
                             <constraint firstAttribute="height" constant="21" id="ZSc-pU-d2r"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>

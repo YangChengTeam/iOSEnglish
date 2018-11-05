@@ -10,6 +10,7 @@
 #define Config_h
 
 #define kNotiLoginSuccess @"kNotiLoginSucceess"
+#define kNotiBook @"kNotiBook"
 
 #define Config_DEBUG 0
 
@@ -55,5 +56,32 @@
 
 #define WEIKE_UNIT_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"news/getChildList"]
 
+#define BOOK_INFO_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/book_info"]
+
+#define BOOK_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/book_list"]
+
+#define GRADE_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/grade_list"]
+
+#define COURSE_VERSION_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/version_list"]
+
+#define COURSE_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/course_list"]
+
+#define SENTENCE_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/sentence_list"]
+
+#define WORD_UNIT_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/unit_list"]
+
+#define WORD_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/words_list"]
+
+#define NOTE_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"book/notelist"]
+
+#define ADD_NOTE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"note/add"]
+
+#define FOLLOW_LIST_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"note/followlist"]
+
+#define ADD_COMMENT_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"note/follow"]
+
+#define ADD_AGREE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"note/agree"]
+
+#define DELETE_NOTE_URL [NSString stringWithFormat:@"%@%@", kCurrentBaseUrl, @"note/delNote"]
 
 #endif /* Config_h */

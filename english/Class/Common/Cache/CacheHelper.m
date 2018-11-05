@@ -12,6 +12,7 @@
 #define CURRENT_USER_KEY @"current_user_key"
 #define USER_NAME_KEY @"user_name_key"
 #define GRADE_KEY @"grade_key"
+#define BOOKS_KEY @"books_key"
 
 
 @interface CacheHelper()
@@ -30,7 +31,7 @@ static CacheHelper* instance = nil;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
     });
-    NSString *basePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) firstObject];
+    NSString *basePath =  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) firstObject];
     instance.diskCache = [[YYDiskCache alloc] initWithPath:[basePath stringByAppendingPathComponent:@"english"]];
     return instance;
 }
@@ -58,6 +59,49 @@ static CacheHelper* instance = nil;
 
 - (NSString *)getGrade {
     return (NSString *)[self.diskCache objectForKey:GRADE_KEY];
+}
+
+
+- (void)setBook:(NSDictionary *)dict withType:(NSString *)type {
+    id books =  [self.diskCache objectForKey:[NSString stringWithFormat:@"%@%@", BOOKS_KEY, type]];
+    if(!books || ![books isKindOfClass:[NSMutableArray class]]){
+        books = [NSMutableArray new];
+    }
+    
+    NSInteger bid = [[dict objectForKey:@"id"] integerValue];
+    for(NSMutableDictionary *info in books){
+        NSInteger bid2 = [[info objectForKey:@"id"] integerValue];
+        if(bid == bid2){
+            [books removeObject:info];
+            break;
+        }
+    }
+    [books insertObject:dict atIndex:0];
+    [self.diskCache setObject:books forKey:[NSString stringWithFormat:@"%@%@", BOOKS_KEY, type]];
+}
+
+- (void)removeBook:(NSDictionary *)dict withType:(NSString *)type {
+    id books =  [self.diskCache objectForKey:[NSString stringWithFormat:@"%@%@", BOOKS_KEY, type]];
+    if(!books || ![books isKindOfClass:[NSMutableArray class]]){
+        books = [NSMutableArray new];
+    }
+    NSInteger bid = [[dict objectForKey:@"id"] integerValue];
+    for(NSMutableDictionary *info in books){
+        NSInteger bid2 = [[info objectForKey:@"id"] integerValue];
+        if(bid == bid2){
+            [books removeObject:info];
+            break;
+        }
+    }
+    [self.diskCache setObject:books forKey:[NSString stringWithFormat:@"%@%@", BOOKS_KEY, type]];
+}
+
+- (NSMutableArray *)getBooksWithType:(NSString *)type {
+    id books =  [self.diskCache objectForKey:[NSString stringWithFormat:@"%@%@", BOOKS_KEY, type]];
+    if(books && [books isKindOfClass:[NSMutableArray class]]){
+        return books;
+    }
+    return nil;
 }
 
 @end

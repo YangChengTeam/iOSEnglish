@@ -1,0 +1,6 @@
+framework module Pods_english {
+  umbrella header "Pods-english-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4B10645B21880B74009D6D2D /* MircoClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */; };
 		4B10646321885603009D6D2D /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */; };
+		4B106472218AA395009D6D2D /* BookSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B106471218AA395009D6D2D /* BookSelectViewController.m */; };
+		4B106475218AA8D6009D6D2D /* BookWordGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B106474218AA8D6009D6D2D /* BookWordGameViewController.m */; };
+		4B106478218ADAAC009D6D2D /* BookVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B106477218ADAAC009D6D2D /* BookVoiceViewController.m */; };
+		4B10647B218BD540009D6D2D /* BooksCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10647A218BD540009D6D2D /* BooksCollectionViewCell.m */; };
+		4B10647E218C1F8B009D6D2D /* NameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10647D218C1F8B009D6D2D /* NameCollectionViewCell.m */; };
 		4B4A57A321741E74007ECE8D /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A221741E74007ECE8D /* NewsViewController.m */; };
 		4B4A57A621741F07007ECE8D /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A521741F07007ECE8D /* NewsDetailViewController.m */; };
 		4B4A57A9217422D1007ECE8D /* BaseInnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A57A8217422D1007ECE8D /* BaseInnerViewController.m */; };
@@ -17,6 +22,10 @@
 		4B7897E521818C9B005182F2 /* ModifyFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7897E421818C9B005182F2 /* ModifyFieldViewController.m */; };
 		4B7897E821818CC3005182F2 /* ModifyGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7897E721818CC3005182F2 /* ModifyGradeViewController.m */; };
 		4B7897EB21818CDF005182F2 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7897EA21818CDF005182F2 /* ModifyPasswordViewController.m */; };
+		4B7BAA0D2190186C00D3E146 /* ModuleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BAA0B2190186C00D3E146 /* ModuleTableViewCell.m */; };
+		4B7BAA0E2190186C00D3E146 /* ModuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7BAA0C2190186C00D3E146 /* ModuleTableViewCell.xib */; };
+		4B7BAA1221901FDA00D3E146 /* BookHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BAA1021901FDA00D3E146 /* BookHeaderTableViewCell.m */; };
+		4B7BAA1321901FDA00D3E146 /* BookHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7BAA1121901FDA00D3E146 /* BookHeaderTableViewCell.xib */; };
 		4B7E36A121772209000CEC95 /* YBImageBrowserProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E366721772209000CEC95 /* YBImageBrowserProgressView.m */; };
 		4B7E36A221772209000CEC95 /* YBImageBrowserSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E366921772209000CEC95 /* YBImageBrowserSheetView.m */; };
 		4B7E36A321772209000CEC95 /* YBImageBrowserTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E366B21772209000CEC95 /* YBImageBrowserTipView.m */; };
@@ -111,7 +120,7 @@
 		4BFF5B64216ED39F00D482E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFF5B63216ED39F00D482E5 /* Assets.xcassets */; };
 		4BFF5B67216ED39F00D482E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFF5B65216ED39F00D482E5 /* LaunchScreen.storyboard */; };
 		4BFF5B6A216ED39F00D482E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFF5B69216ED39F00D482E5 /* main.m */; };
-		8E2C0C07571DC0C366636776 /* libPods-english.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48E6A67794CBEA44777FD1 /* libPods-english.a */; };
+		B0260A4BA6CC984C3D0AB1DF /* libPods-english.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BF8A40303681B4AE393CF5 /* libPods-english.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +128,16 @@
 		4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MircoClassCollectionViewCell.m; sourceTree = "<group>"; };
 		4B10646021885603009D6D2D /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
 		4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		4B106470218AA395009D6D2D /* BookSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookSelectViewController.h; sourceTree = "<group>"; };
+		4B106471218AA395009D6D2D /* BookSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookSelectViewController.m; sourceTree = "<group>"; };
+		4B106473218AA8D6009D6D2D /* BookWordGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookWordGameViewController.h; sourceTree = "<group>"; };
+		4B106474218AA8D6009D6D2D /* BookWordGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookWordGameViewController.m; sourceTree = "<group>"; };
+		4B106476218ADAAC009D6D2D /* BookVoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookVoiceViewController.h; sourceTree = "<group>"; };
+		4B106477218ADAAC009D6D2D /* BookVoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookVoiceViewController.m; sourceTree = "<group>"; };
+		4B106479218BD540009D6D2D /* BooksCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksCollectionViewCell.h; sourceTree = "<group>"; };
+		4B10647A218BD540009D6D2D /* BooksCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksCollectionViewCell.m; sourceTree = "<group>"; };
+		4B10647C218C1F8B009D6D2D /* NameCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NameCollectionViewCell.h; sourceTree = "<group>"; };
+		4B10647D218C1F8B009D6D2D /* NameCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NameCollectionViewCell.m; sourceTree = "<group>"; };
 		4B4A57A121741E74007ECE8D /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		4B4A57A221741E74007ECE8D /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		4B4A57A421741F07007ECE8D /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
@@ -135,6 +154,12 @@
 		4B7897E721818CC3005182F2 /* ModifyGradeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyGradeViewController.m; sourceTree = "<group>"; };
 		4B7897E921818CDF005182F2 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
 		4B7897EA21818CDF005182F2 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		4B7BAA0A2190186C00D3E146 /* ModuleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModuleTableViewCell.h; sourceTree = "<group>"; };
+		4B7BAA0B2190186C00D3E146 /* ModuleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuleTableViewCell.m; sourceTree = "<group>"; };
+		4B7BAA0C2190186C00D3E146 /* ModuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleTableViewCell.xib; sourceTree = "<group>"; };
+		4B7BAA0F21901FDA00D3E146 /* BookHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookHeaderTableViewCell.h; sourceTree = "<group>"; };
+		4B7BAA1021901FDA00D3E146 /* BookHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookHeaderTableViewCell.m; sourceTree = "<group>"; };
+		4B7BAA1121901FDA00D3E146 /* BookHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4B7E366621772209000CEC95 /* YBImageBrowserProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserProgressView.h; sourceTree = "<group>"; };
 		4B7E366721772209000CEC95 /* YBImageBrowserProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBImageBrowserProgressView.m; sourceTree = "<group>"; };
 		4B7E366821772209000CEC95 /* YBImageBrowserSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBImageBrowserSheetView.h; sourceTree = "<group>"; };
@@ -314,9 +339,9 @@
 		4BFF5B66216ED39F00D482E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BFF5B68216ED39F00D482E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BFF5B69216ED39F00D482E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92BF8A40303681B4AE393CF5 /* libPods-english.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-english.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0FDE036F3648895F8AA159 /* Pods-english.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-english.release.xcconfig"; path = "Pods/Target Support Files/Pods-english/Pods-english.release.xcconfig"; sourceTree = "<group>"; };
 		D278EA74E2AED20D15F45B1B /* Pods-english.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-english.debug.xcconfig"; path = "Pods/Target Support Files/Pods-english/Pods-english.debug.xcconfig"; sourceTree = "<group>"; };
-		DA48E6A67794CBEA44777FD1 /* libPods-english.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-english.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,11 +359,11 @@
 				4BF53316216EE79E0078FBA7 /* UMCommon.framework in Frameworks */,
 				4BF5331B216EE79E0078FBA7 /* UShareUI.framework in Frameworks */,
 				4BF5331F216EE79E0078FBA7 /* UMCommonLog.framework in Frameworks */,
-				8E2C0C07571DC0C366636776 /* libPods-english.a in Frameworks */,
 				4BF53319216EE79E0078FBA7 /* UMShare.framework in Frameworks */,
 				4BF53315216EE79D0078FBA7 /* UMAnalytics.framework in Frameworks */,
 				4BF5331C216EE79E0078FBA7 /* SecurityEnvSDK.framework in Frameworks */,
 				4BF5331D216EE79E0078FBA7 /* UTDID.framework in Frameworks */,
+				B0260A4BA6CC984C3D0AB1DF /* libPods-english.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +378,7 @@
 				4BFAF9F121718DD800C95F7E /* libz.tbd */,
 				4BFAF9EF21718DD100C95F7E /* libc++.tbd */,
 				4BFAF9ED21718DC300C95F7E /* libsqlite3.tbd */,
-				DA48E6A67794CBEA44777FD1 /* libPods-english.a */,
+				92BF8A40303681B4AE393CF5 /* libPods-english.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -619,6 +644,12 @@
 				4B7897E721818CC3005182F2 /* ModifyGradeViewController.m */,
 				4B7897E921818CDF005182F2 /* ModifyPasswordViewController.h */,
 				4B7897EA21818CDF005182F2 /* ModifyPasswordViewController.m */,
+				4B106470218AA395009D6D2D /* BookSelectViewController.h */,
+				4B106471218AA395009D6D2D /* BookSelectViewController.m */,
+				4B106473218AA8D6009D6D2D /* BookWordGameViewController.h */,
+				4B106474218AA8D6009D6D2D /* BookWordGameViewController.m */,
+				4B106476218ADAAC009D6D2D /* BookVoiceViewController.h */,
+				4B106477218ADAAC009D6D2D /* BookVoiceViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -658,6 +689,16 @@
 				4B10645921880B74009D6D2D /* MircoClassCollectionViewCell.m */,
 				4B10646021885603009D6D2D /* HeaderCollectionReusableView.h */,
 				4B10646121885603009D6D2D /* HeaderCollectionReusableView.m */,
+				4B106479218BD540009D6D2D /* BooksCollectionViewCell.h */,
+				4B10647A218BD540009D6D2D /* BooksCollectionViewCell.m */,
+				4B10647C218C1F8B009D6D2D /* NameCollectionViewCell.h */,
+				4B10647D218C1F8B009D6D2D /* NameCollectionViewCell.m */,
+				4B7BAA0A2190186C00D3E146 /* ModuleTableViewCell.h */,
+				4B7BAA0B2190186C00D3E146 /* ModuleTableViewCell.m */,
+				4B7BAA0C2190186C00D3E146 /* ModuleTableViewCell.xib */,
+				4B7BAA0F21901FDA00D3E146 /* BookHeaderTableViewCell.h */,
+				4B7BAA1021901FDA00D3E146 /* BookHeaderTableViewCell.m */,
+				4B7BAA1121901FDA00D3E146 /* BookHeaderTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -994,8 +1035,10 @@
 			files = (
 				4BFF5B67216ED39F00D482E5 /* LaunchScreen.storyboard in Resources */,
 				4BBFD82C21704DC80093ECE1 /* IndexHeaderTableViewCell.xib in Resources */,
+				4B7BAA0E2190186C00D3E146 /* ModuleTableViewCell.xib in Resources */,
 				4B7E36B621772209000CEC95 /* YBImageBrowser.bundle in Resources */,
 				4BB005DE2186AF1F000D81DB /* BRPickerView.bundle in Resources */,
+				4B7BAA1321901FDA00D3E146 /* BookHeaderTableViewCell.xib in Resources */,
 				4BF5331A216EE79E0078FBA7 /* UMSocialSDKResources.bundle in Resources */,
 				4BFF5B64216ED39F00D482E5 /* Assets.xcassets in Resources */,
 				4B7E36C421786FC6000CEC95 /* SettingItemTableViewCell.xib in Resources */,
@@ -1052,9 +1095,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-english/Pods-english-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/MobilePlayer/MobilePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/RDVTabBarController/RDVTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/STPopup/STPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobilePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RDVTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1069,6 +1137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B10646321885603009D6D2D /* HeaderCollectionReusableView.m in Sources */,
+				4B106478218ADAAC009D6D2D /* BookVoiceViewController.m in Sources */,
 				4B7E36B021772209000CEC95 /* YBImageBrowseCell.m in Sources */,
 				4BB005E12186AF1F000D81DB /* NSDate+BRPickerView.m in Sources */,
 				4BFAF9F921719A4200C95F7E /* LoginViewController.m in Sources */,
@@ -1099,16 +1168,19 @@
 				4BB918EB217D5FD80027853E /* QQViewController.m in Sources */,
 				4BF532D0216EE1330078FBA7 /* BookWordsViewController.m in Sources */,
 				4BFAFA0821719B1300C95F7E /* PromotionViewController.m in Sources */,
+				4B106472218AA395009D6D2D /* BookSelectViewController.m in Sources */,
 				4B4A57AC21743D7A007ECE8D /* NewsType.m in Sources */,
 				4B7E36A521772209000CEC95 /* YBImageBrowserView.m in Sources */,
 				4B7E36A621772209000CEC95 /* YBImageBrowserViewLayout.m in Sources */,
 				4BFAF9E82171847100C95F7E /* ShareInfo.m in Sources */,
 				4B7E36B221772209000CEC95 /* YBVideoBrowseActionBar.m in Sources */,
+				4B7BAA1221901FDA00D3E146 /* BookHeaderTableViewCell.m in Sources */,
 				4B7E36B321772209000CEC95 /* YBVideoBrowseCell.m in Sources */,
 				4BFF5B6A216ED39F00D482E5 /* main.m in Sources */,
 				4B4A57A621741F07007ECE8D /* NewsDetailViewController.m in Sources */,
 				4BFAF9FF21719AA700C95F7E /* SettingViewController.m in Sources */,
 				4BF532E2216EE2BB0078FBA7 /* MicroClassDetailViewController.m in Sources */,
+				4B10647B218BD540009D6D2D /* BooksCollectionViewCell.m in Sources */,
 				4B7E36B421772209000CEC95 /* YBVideoBrowseCellData.m in Sources */,
 				4B10645B21880B74009D6D2D /* MircoClassCollectionViewCell.m in Sources */,
 				4B7E36A921772209000CEC95 /* YBIBGestureInteractionProfile.m in Sources */,
@@ -1117,11 +1189,14 @@
 				4BFAFA0221719ADA00C95F7E /* OrderRecordViewController.m in Sources */,
 				4BF532D6216EE1640078FBA7 /* BookContentDetailViewController.m in Sources */,
 				4BF532D3216EE1430078FBA7 /* BookContentsViewController.m in Sources */,
+				4B10647E218C1F8B009D6D2D /* NameCollectionViewCell.m in Sources */,
 				4B7E36B721772209000CEC95 /* YBImageBrowser.m in Sources */,
 				4BF5333E216F19890078FBA7 /* BaseNavigationController.m in Sources */,
 				4BFF5B5C216ED39D00D482E5 /* AppDelegate.m in Sources */,
 				4B7E36C321786FC6000CEC95 /* SettingItemTableViewCell.m in Sources */,
+				4B7BAA0D2190186C00D3E146 /* ModuleTableViewCell.m in Sources */,
 				4BF532CD216EE10B0078FBA7 /* BooksViewController.m in Sources */,
+				4B106475218AA8D6009D6D2D /* BookWordGameViewController.m in Sources */,
 				4BF532C4216EE0B70078FBA7 /* IndexViewController.m in Sources */,
 				4B7897EB21818CDF005182F2 /* ModifyPasswordViewController.m in Sources */,
 				4B7E36AD21772209000CEC95 /* YBIBUtilities.m in Sources */,
@@ -1301,7 +1376,7 @@
 				);
 				GCC_PREFIX_HEADER = /Users/zhangkai/Desktop/iOSEglish/english/english/Class/Common/Common.pch;
 				INFOPLIST_FILE = english/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1335,7 +1410,7 @@
 				);
 				GCC_PREFIX_HEADER = /Users/zhangkai/Desktop/iOSEglish/english/english/Class/Common/Common.pch;
 				INFOPLIST_FILE = english/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

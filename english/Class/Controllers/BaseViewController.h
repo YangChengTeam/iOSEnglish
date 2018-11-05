@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)countdown:(UIButton *)codeBtn;
+
+- (void)interfaceOrientation:(UIInterfaceOrientation)orientation;
+
 @end
 
 NS_ASSUME_NONNULL_END

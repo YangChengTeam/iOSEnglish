@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_head_bg" translatesAutoresizingMaskIntoConstraints="NO" id="vFn-fW-cbc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
+                        <rect key="frame" x="0.0" y="-24" width="320" height="174"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="174" id="rKp-mp-u1F"/>
                         </constraints>
@@ -71,7 +71,7 @@
                     <constraint firstItem="L7C-8f-F83" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dqc-ov-nCx"/>
                     <constraint firstItem="Ry2-3B-1dR" firstAttribute="top" secondItem="fC0-Y9-O0E" secondAttribute="bottom" constant="6" id="drM-Zv-qEf"/>
                     <constraint firstItem="L7C-8f-F83" firstAttribute="top" secondItem="Ry2-3B-1dR" secondAttribute="bottom" constant="6" id="eDr-8C-feU"/>
-                    <constraint firstItem="vFn-fW-cbc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eUg-Rh-DNJ"/>
+                    <constraint firstItem="vFn-fW-cbc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-24" id="eUg-Rh-DNJ"/>
                     <constraint firstItem="bHP-2A-KO1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="hml-hR-yKJ"/>
                     <constraint firstItem="vFn-fW-cbc" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="ki9-yB-kvn"/>
                     <constraint firstItem="fC0-Y9-O0E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="uQS-FB-4ot"/>
