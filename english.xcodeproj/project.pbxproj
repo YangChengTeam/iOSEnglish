@@ -70,6 +70,8 @@
 		4BBFD82C21704DC80093ECE1 /* IndexHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBFD82A21704DC80093ECE1 /* IndexHeaderTableViewCell.xib */; };
 		4BBFD83021706B800093ECE1 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBFD82E21706B800093ECE1 /* NewsTableViewCell.m */; };
 		4BBFD83121706B800093ECE1 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBFD82F21706B800093ECE1 /* NewsTableViewCell.xib */; };
+		4BD1B5CE21912070002C9B77 /* BookWordsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD1B5CD21912070002C9B77 /* BookWordsCollectionViewCell.m */; };
+		4BD1B5D121912ABD002C9B77 /* WordsHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD1B5D021912ABD002C9B77 /* WordsHeaderCollectionReusableView.m */; };
 		4BF532BE216EDFBF0078FBA7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF532BD216EDFBF0078FBA7 /* BaseViewController.m */; };
 		4BF532C1216EE00E0078FBA7 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF532C0216EE00E0078FBA7 /* MainTabBarViewController.m */; };
 		4BF532C4216EE0B70078FBA7 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF532C3216EE0B70078FBA7 /* IndexViewController.m */; };
@@ -254,6 +256,10 @@
 		4BBFD82F21706B800093ECE1 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		4BBFD832217072830093ECE1 /* Common.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.pch; sourceTree = "<group>"; };
 		4BBFD833217072AC0093ECE1 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		4BD1B5CC21912070002C9B77 /* BookWordsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookWordsCollectionViewCell.h; sourceTree = "<group>"; };
+		4BD1B5CD21912070002C9B77 /* BookWordsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookWordsCollectionViewCell.m; sourceTree = "<group>"; };
+		4BD1B5CF21912ABD002C9B77 /* WordsHeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordsHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		4BD1B5D021912ABD002C9B77 /* WordsHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordsHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		4BF532BC216EDFBF0078FBA7 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		4BF532BD216EDFBF0078FBA7 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4BF532BF216EE00E0078FBA7 /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
@@ -699,6 +705,10 @@
 				4B7BAA0F21901FDA00D3E146 /* BookHeaderTableViewCell.h */,
 				4B7BAA1021901FDA00D3E146 /* BookHeaderTableViewCell.m */,
 				4B7BAA1121901FDA00D3E146 /* BookHeaderTableViewCell.xib */,
+				4BD1B5CC21912070002C9B77 /* BookWordsCollectionViewCell.h */,
+				4BD1B5CD21912070002C9B77 /* BookWordsCollectionViewCell.m */,
+				4BD1B5CF21912ABD002C9B77 /* WordsHeaderCollectionReusableView.h */,
+				4BD1B5D021912ABD002C9B77 /* WordsHeaderCollectionReusableView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1147,6 +1157,7 @@
 				4BFAFA0B21719CEE00C95F7E /* UserInfoViewController.m in Sources */,
 				4BF53330216EE8020078FBA7 /* NetUtils.m in Sources */,
 				4B7E36BE21786FB7000CEC95 /* SettingHeaderTableViewCell.m in Sources */,
+				4BD1B5CE21912070002C9B77 /* BookWordsCollectionViewCell.m in Sources */,
 				4B7E36AE21772209000CEC95 /* YBIBWebImageManager.m in Sources */,
 				4BF53341216F1A1D0078FBA7 /* BaseView.m in Sources */,
 				4B7E36A721772209000CEC95 /* YBIBCopywriter.m in Sources */,
@@ -1186,6 +1197,7 @@
 				4B7E36A921772209000CEC95 /* YBIBGestureInteractionProfile.m in Sources */,
 				4BB005DD2186AF1F000D81DB /* BRAddressPickerView.m in Sources */,
 				4B7897E521818C9B005182F2 /* ModifyFieldViewController.m in Sources */,
+				4BD1B5D121912ABD002C9B77 /* WordsHeaderCollectionReusableView.m in Sources */,
 				4BFAFA0221719ADA00C95F7E /* OrderRecordViewController.m in Sources */,
 				4BF532D6216EE1640078FBA7 /* BookContentDetailViewController.m in Sources */,
 				4BF532D3216EE1430078FBA7 /* BookContentsViewController.m in Sources */,

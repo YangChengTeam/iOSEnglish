@@ -7,6 +7,7 @@
 //
 
 #import "BookWordDetailViewController.h"
+#import <HVTableView/HVTableView.h>
 
 @interface BookWordDetailViewController ()
 

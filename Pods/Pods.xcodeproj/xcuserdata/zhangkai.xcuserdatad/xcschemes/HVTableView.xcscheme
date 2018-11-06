@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2084802C26EB34556AF09DEA12B6C6DD"
-               BlueprintName = "YYModel"
+               BlueprintIdentifier = "AD76628E4894842568512A508883A719"
+               BlueprintName = "HVTableView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libYYModel.a">
+               BuildableName = "libHVTableView.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

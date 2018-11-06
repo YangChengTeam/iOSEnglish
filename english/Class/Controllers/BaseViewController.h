@@ -35,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)interfaceOrientation:(UIInterfaceOrientation)orientation;
 
+- (IBAction)nav2read:(id)sender;
+- (IBAction)nav2word:(id)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

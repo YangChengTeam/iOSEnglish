@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BooksViewController : BaseInnerViewController
 
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) NSString *title;
 
 @end
 

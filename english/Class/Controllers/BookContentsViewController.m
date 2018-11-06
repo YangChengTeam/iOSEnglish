@@ -97,9 +97,9 @@ static NSString *bookHeaderIdentifier = @"bookHeaderIdentifier";
         NSLog(@"%@", _bookInfo);
         BookHeaderTableViewCell *bookHeaderCell =  (BookHeaderTableViewCell *)cell;
         [bookHeaderCell.photoImageView sd_setImageWithURL:[NSURL URLWithString:_info[@"cover_img"]] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-        bookHeaderCell.nameLbl.text = _bookInfo[@"name"];
-        bookHeaderCell.versionLbl.text = _bookInfo[@"press"];
         if(_bookInfo){
+            bookHeaderCell.nameLbl.text = _bookInfo[@"name"];
+            bookHeaderCell.versionLbl.text = _bookInfo[@"press"];
             bookHeaderCell.moduleNumLbl.text = [NSString stringWithFormat:@"%@句", _bookInfo[@"sentence_count"]];
         }
     }

@@ -38,10 +38,7 @@
 
 @property (nonatomic, assign) IBOutlet UITableView *topTableView;
 
-@property (nonatomic, assign) IBOutlet UIButton *readBtn;
-@property (nonatomic, assign) IBOutlet UIButton *wordBtn;
-@property (nonatomic, assign) IBOutlet UIButton *taskBtn;
-@property (nonatomic, assign) IBOutlet UIButton *phoneticBtn; //音标
+
 
 
 @end

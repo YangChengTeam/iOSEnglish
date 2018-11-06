@@ -12,6 +12,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import "BookSelectViewController.h"
 #import "BookContentsViewController.h"
+#import "BookWordsViewController.h"
 
 
 @interface BooksViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -22,6 +23,13 @@
 
 @property (nonatomic, assign) IBOutlet UIButton *editBtn;
 @property (nonatomic, assign) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, assign) IBOutlet UIImageView *readImageView;
+@property (nonatomic, assign) IBOutlet UIImageView *wordImageView;
+
+
+@property (nonatomic, assign) IBOutlet UILabel *readLbl;
+@property (nonatomic, assign) IBOutlet UILabel *wordLbl;
 
 @end
 
@@ -38,9 +46,14 @@
     self.titleLbl.text = self.title;
     if([self.title isEqualToString:@"课本点读"]){
         _type = @"read";
+        _readImageView.image = [UIImage imageNamed:@"everyday_weike"];
+        _readLbl.text = @"同步微课";
+       
     }
     else if([self.title isEqualToString:@"单词宝典"]){
         _type = @"word";
+        _wordImageView.image = [UIImage imageNamed:@"everyday_weike"];
+        _wordLbl.text = @"同步微课";
     }
     
     [self reload:nil];
@@ -157,6 +170,34 @@
     } else if([segue.identifier isEqualToString:@"bookSelect"]){
         BookSelectViewController *contentsViewController = segue.destinationViewController;
         contentsViewController.type = sender;
+    } else if([segue.identifier isEqualToString:@"bookWords"]){
+        BookWordsViewController *contentsViewController = segue.destinationViewController;
+        contentsViewController.info = sender;
+    }
+}
+
+
+- (void)nav2read:(id)sender {
+    if([self.title isEqualToString:@"课本点读"]){
+        [self performSegueWithIdentifier:@"microClass" sender:nil];
+    }
+    else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        BooksViewController *bookViewController = [storyboard instantiateViewControllerWithIdentifier:@"books"];
+        bookViewController.title = @"课本点读";
+        [self.navigationController pushViewController:bookViewController animated:YES];
+    }
+}
+
+- (void)nav2word:(id)sender {
+    if([self.title isEqualToString:@"单词宝典"]){
+        [self performSegueWithIdentifier:@"microClass" sender:nil];
+    }
+    else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        BooksViewController *bookViewController = [storyboard instantiateViewControllerWithIdentifier:@"books"];
+        bookViewController.title = @"单词宝典";
+        [self.navigationController pushViewController:bookViewController animated:YES];
     }
 }
 
