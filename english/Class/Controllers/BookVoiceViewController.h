@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)clear;
 
+- (void)text2speech:(NSString *)text rate:(float)rate ;
+- (void)text2speechStop;
 @end
 
 NS_ASSUME_NONNULL_END

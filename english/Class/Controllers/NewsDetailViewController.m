@@ -16,6 +16,7 @@
 #import "NewsDetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <WebKit/WebKit.h>
+#import "BooksViewController.h"
 
 
 @interface NewsDetailViewController ()<UIScrollViewDelegate, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler, YBImageBrowserDataSource, UITableViewDelegate, UITableViewDataSource>
@@ -260,6 +261,13 @@ static NSString *newsViewIdentifier=@"newsViewIdentifier";
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"%@", sender);
+    if([segue.identifier isEqualToString:@"books"]){
+        BooksViewController *contentsViewController = segue.destinationViewController;
+        contentsViewController.title = sender;
+    }
+}
 
 
 /*

@@ -6,11 +6,11 @@
 //  Copyright © 2018年 zhangkai. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BookVoiceViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BookWordDetailViewController : BaseViewController
+@interface BookWordDetailViewController : BookVoiceViewController
 
 
 @property (nonatomic, strong) NSDictionary *info;

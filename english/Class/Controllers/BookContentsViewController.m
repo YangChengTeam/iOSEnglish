@@ -124,7 +124,7 @@ static NSString *bookHeaderIdentifier = @"bookHeaderIdentifier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
-    NSDictionary *info = self->_dataSource[row];
+    NSDictionary *info = self->_dataSource[row-1];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"bookDetail" sender:info];
 }

@@ -126,8 +126,10 @@ static NSString *identifier2 = @"textbook";
     }
     if(flag){
         cell.nameBtn.backgroundColor = [UIColor grayColor];
+        [cell.nameBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     } else {
         cell.nameBtn.backgroundColor = [UIColor whiteColor];
+        [cell.nameBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     }
     [cell.nameBtn setTitle:info[titleName] forState:UIControlStateNormal];
     return cell;

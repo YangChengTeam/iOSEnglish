@@ -7,10 +7,10 @@
 //
 
 #import "BookVoiceViewController.h"
-#import <AVFoundation/AVSpeechSynthesis.h>
+#import <AVFoundation/AVFoundation.h>
 #import <Speech/Speech.h>
 
-@interface BookVoiceViewController ()<SFSpeechRecognizerDelegate, AVAudioRecorderDelegate>
+@interface BookVoiceViewController ()<SFSpeechRecognizerDelegate, AVAudioRecorderDelegate, AVSpeechSynthesizerDelegate>
 
 @property (nonatomic, strong) AVSpeechSynthesizer *av;
 
@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.av = [[AVSpeechSynthesizer alloc] init];
-    
+    self.av.delegate = self;
     self.speechRecognizer = [[SFSpeechRecognizer alloc] init];
     self.speechRecognizer.delegate = self;
     self.recognitionRequest = [[SFSpeechAudioBufferRecognitionRequest alloc] init];
@@ -126,11 +126,61 @@
     [self clear];
 }
 
-- (void)text2speech:(NSString *)text {
+- (void)text2speech:(NSString *)text rate:(float)rate {
+    AVSpeechSynthesisVoice *voiceLanguage = [AVSpeechSynthesisVoice voiceWithLanguage:@"en"];
+
     AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc]initWithString:text];
+    
     utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+    // 设置合成语音的语言
+    utterance.voice = voiceLanguage;
+    // 语速 0.0f～1.0f
+    utterance.rate = rate;
+    // 声音的音调 0.5f～2.0f
+    utterance.pitchMultiplier = 1.0f;
+    // 使播放下一句的时候有0.1秒的延迟
+    utterance.postUtteranceDelay = 0.5f;
+    
     [self.av speakUtterance:utterance];
 }
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self text2speechStop];
+}
+
+- (void)text2speechStop {
+    [self.av stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+}
+
+# pragma - 合成
+// 播放开始状态
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didStartSpeechUtterance:(AVSpeechUtterance *)utterance {
+    
+}
+// 播放结束状态
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
+    
+}
+// 播放暂停状态
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didPauseSpeechUtterance:(AVSpeechUtterance *)utterance {
+    
+}
+// 跳出播放状态
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didContinueSpeechUtterance:(AVSpeechUtterance *)utterance {
+    
+}
+// 退出播放状态
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didCancelSpeechUtterance:(AVSpeechUtterance *)utterance {
+    
+}
+// 播放状态时，当前所播放的字符串范围，及AVSpeechUtterance实例（可通过此方法监听当前播放的字或者词）
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer willSpeakRangeOfSpeechString:(NSRange)characterRange utterance:(AVSpeechUtterance *)utterance {
+    
+}
+
+
+
 
 - (void)speech2text:(NSString *)url {
     self.recognitionRequest.shouldReportPartialResults = YES;

@@ -167,7 +167,7 @@
 }
 
 - (IBAction)nav2test:(id)sender {
-    [self alert:@"正在开发中..."];
+    [self alert:@"开发中..."];
 }
 
 - (IBAction)nav2task:(id)sender {
